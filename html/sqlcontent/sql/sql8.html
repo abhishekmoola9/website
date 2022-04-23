@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL</title>
+    <link rel="stylesheet" href="C:\Users\Sahithi\techera\sessions\java\java1.css">
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-3 col-s-3 menu">
+            <ul>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql.html" style="text-decoration: none;">SQL
+                        Tutorial</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql1.html" style="text-decoration: none;">SQL
+                        Database</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql2.html" style="text-decoration: none;">SQL
+                        Table</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql3.html" style="text-decoration: none;">SQL
+                        Select</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql4.html" style="text-decoration: none;">SQL
+                        Clause</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql5.html" style="text-decoration: none;">Order
+                        By</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql6.html" style="text-decoration: none;">Insert</a>
+                </li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql7.html" style="text-decoration: none;">Update</a>
+                </li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql8.html" style="text-decoration: none;">Delete</a>
+                </li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql9.html" style="text-decoration: none;">SQL
+                        Joins</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql10.html" style="text-decoration: none;">SQL
+                        Keys</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql11.html"
+                        style="text-decoration: none;">Difference</a></li>
+            </ul>
+        </div>
+
+        <div class="col-9 col-s-9">
+            <h1 class="h1">SQL DELETE</h1>
+            <p>The <b>SQL DELETE statement</b> is used to delete rows from a table. Generally DELETE statement removes
+                one or more records from a table.</p>
+            <h4 class="h4">SQL DELETE Syntax</h4>
+            <p>Let's see the Syntax for the SQL DELETE statement:</p>
+            <p>DELETE FROM table_name [WHERE condition];</p> 
+            <p>Here table_name is the table which has to be deleted. The <i>WHERE clause</i> in SQL DELETE statement is
+                optional here.</p>
+            <hr>
+            <h4 class="h4">SQL DELETE Example</h4>
+            <p>Let us take a table, named "EMPLOYEE" table.</p>
+            <table id="comparision">
+                <tbody>
+                    <tr>
+                        <th>ID</th>
+                        <th>EMP_NAME</th>
+                        <th>CITY</th>
+                        <th>SALARY</th>
+                    </tr>
+                    <tr>
+                        <td>101</td>
+                        <td>Adarsh Singh</td>
+                        <td>Obra</td>
+                        <th>20000</th>
+                    </tr>
+                    <tr>
+                        <td>102</td>
+                        <td>Sanjay Singh</td>
+                        <td>Meerut</td>
+                        <th>21000</th>
+                    </tr>
+                    <tr>
+                        <td>103</td>
+                        <td>Priyanka Sharma</td>
+                        <td>Raipur</td>
+                        <th>25000</th>
+                    </tr>
+                    <tr>
+                        <td>104</td>
+                        <td>Esha Singhal</td>
+                        <td>Delhi</td>
+                        <th>26000</th>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Example of delete with WHERE clause is given below:</p>
+            <p>DELETE FROM EMPLOYEE WHERE ID=101;</p> 
+            <p>Resulting table after the query:</p>
+            <table id="comparision">
+                <tbody>
+                    <tr>
+                        <th>ID</th>
+                        <th>EMP_NAME</th>
+                        <th>CITY</th>
+                        <th>SALARY</th>
+                    </tr>
+                    <tr>
+                        <td>102</td>
+                        <td>Sanjay Singh</td>
+                        <td>Meerut</td>
+                        <th>21000</th>
+                    </tr>
+                    <tr>
+                        <td>103</td>
+                        <td>Priyanka Sharma</td>
+                        <td>Raipur</td>
+                        <th>25000</th>
+                    </tr>
+                    <tr>
+                        <td>104</td>
+                        <td>Esha Singhal</td>
+                        <td>Delhi</td>
+                        <th>26000</th>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Another example of delete statement is given below</p>
+            <p>DELETE FROM EMPLOYEE;</p> 
+            <p>Resulting table after the query:</p>
+            <table id="comparision">
+                <tbody>
+                    <tr>
+                        <th>ID</th>
+                        <th>EMP_NAME</th>
+                        <th>CITY</th>
+                        <th>SALARY</th>
+                    </tr>
+                </tbody>
+            </table>
+            <p>It will delete all the records of EMPLOYEE table.</p>
+            <p>It will delete the all the records of EMPLOYEE table where ID is 101.</p>
+            <p style="line-height: 25px;">The WHERE clause in the SQL DELETE statement is optional and it identifies the rows in the column that
+                gets deleted.</p>
+            <p style="line-height: 25px;">WHERE clause is used to prevent the deletion of all the rows in the table, If you don't use the WHERE
+                clause you might loss all the rows.</p>
+            <hr>
+            <h4 class="h4">Invalid DELETE Statement for ORACLE database</h4>
+            <p>You cannot use * (asterisk) symbol to delete all the records.</p>
+            <p>DELETE * FROM EMPLOYEE;</p> 
+            <hr>
+            <h2 class="h2">Topics of SQL DELETE Statement</h2>
+            <ul style="line-height: 30px;">
+                <li>SQL DELETE TABLE</li>
+                <li>SQL DELETE ROW</li>
+                <li>SQL DELETE All Rows</li>
+                <li>SQL DELETE Duplicate Rows</li>
+                <li>SQL DELETE DATABASE</li>
+                <li>SQL DELETE VIEW</li>
+                <li>SQL DELETE JOIN</li>
+            </ul>
+
+</body>
+
+</html>

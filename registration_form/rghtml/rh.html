@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title
+        
+        <link rel="stylesheet" href="E:\website\css\new.css">
+        <script>
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});
+        </script>
+        
+    <link rel="stylesheet" href="E:\website\css\login.css">
+    
+</head>
+<body>
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<h1>Register Here</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>or use your mail id</span>
+			<input type="email" placeholder="Email" />
+			<input type="number" placeholder="Mobile Number" />
+			<input type="text" placeholder="User Name"/>
+			<input type="password" placeholder="Password"/>
+			<input type="password" placeholder="Re-enter Password"/>
+			<a href="#"></a>
+			<button>Submit</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Register Here!</h1>
+				
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Friend!</h1>
+				<p><h1>Enter your personal details and start journey with us</h1></p>
+				
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

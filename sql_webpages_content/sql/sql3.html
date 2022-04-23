@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL</title>
+    <link rel="stylesheet" href="C:\Users\Sahithi\techera\sessions\java\java1.css">
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-3 col-s-3 menu">
+            <ul>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql.html" style="text-decoration: none;">SQL
+                        Tutorial</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql1.html" style="text-decoration: none;">SQL
+                        Database</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql2.html" style="text-decoration: none;">SQL
+                        Table</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql3.html" style="text-decoration: none;">SQL
+                        Select</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql4.html" style="text-decoration: none;">SQL
+                        Clause</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\pages\java6.html" style="text-decoration: none;">Order
+                        By</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\pages\java7.html"
+                        style="text-decoration: none;">Insert</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\pages\java8.html"
+                        style="text-decoration: none;">Update</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\pages\java9.html"
+                        style="text-decoration: none;">Delete</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\pages\java10.html" style="text-decoration: none;">SQL
+                        Joins</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\pages\java11.html" style="text-decoration: none;">SQL
+                        Keys</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\pages\java12.html"
+                        style="text-decoration: none;">Difference</a></li>
+            </ul>
+        </div>
+
+        <div class="col-9 col-s-9">
+            <h1 class="h1">SQL SELECT</h1>
+            <p>The most commonly used SQL command is <b>SELECT statement</b>. It is used to query the database and
+                retrieve selected data that follow the conditions we want. </p>
+            <p>In simple words, we can say that the select statement used to query or retrieve data from a table in the
+                database.</p>
+            <p>Let's see the syntax of select statement.</p>
+            <p>SELECT expressions <br> FROM tables <br>
+                WHERE conditions;
+            </p>
+            <p>Here expression is the column that we want to retrieve.</p>
+            <p>Tables indicate the tables, we want to retrieve records from.</p>
+            <hr>
+            <h2 class="h2">Optional clauses in SELECT statement</h2>
+            <p>There are some optional clauses in SELECT statement:</p>
+            <p><b>[WHERE Clause]</b> : It specifies which rows to retrieve.</p>
+            <p><b>[GROUP BY Clause]</b> : Groups rows that share a property so that the aggregate function can be
+                applied to each group.</p>
+            <p><b>[HAVING Clause]</b> : It selects among the groups defined by the GROUP BY clause. </p>
+            <p><b>[ORDER BY Clause]</b> : It specifies an order in which to return the rows.</p>
+            <p>For example, let a database table: student_details;</p>
+            <table id="comparision">
+                <tbody>
+                    <tr>
+                        <th>ID</th>
+                        <th>First_name</th>
+                        <th>Last_name</th>
+                        <th>Age</th>
+                        <th>Subject</th>
+                        <th>Hobby</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Amar</td>
+                        <td>Sharma</td>
+                        <td>20</td>
+                        <td>Maths</td>
+                        <td>Cricket</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Akbar</td>
+                        <td>Khan</td>
+                        <td>22</td>
+                        <td>Biology</td>
+                        <td>Football</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Anthony</td>
+                        <td>Milton</td>
+                        <td>25</td>
+                        <td>Commerce</td>
+                        <td>Gambling</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>From the above example, select the first name of all the students.
+                To do so, query should be like this:</p>
+            <div class="codeblock">
+                <div class="dp-highlighter">
+                    <div class="bar">
+                        <div class="tools"><a href="#"
+                                onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;"></a><a href="#"
+                                onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;"></a><a href="#"
+                                onclick="dp.sh.Toolbar.Command('About',this);return false;"></a></div>
+                    </div>
+                    <ol start="1" class="dp-sql">
+                        <li class="alt"><span><span
+                                    class="keyword">SELECT</span><span>&nbsp;first_name&nbsp;</span><span
+                                    class="keyword">FROM</span><span>&nbsp;student_details;&nbsp;&nbsp;</span></span>
+                        </li>
+                    </ol>
+                </div><textarea name="code" class="sql" style="display: none;">SELECT first_name FROM student_details;
+</textarea>
+            </div>
+            <p>Note: the SQL commands are not case sensitive. We can also write the above SELECT statement as: </p>
+            <div class="codeblock">
+                <div class="dp-highlighter">
+                    <div class="bar">
+                        <div class="tools"><a href="#"
+                                onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;"></a><a href="#"
+                                onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;"></a><a href="#"
+                                onclick="dp.sh.Toolbar.Command('About',this);return false;"></a></div>
+                    </div>
+                    <ol start="1" class="dp-sql">
+                        <li class="alt"><span><span
+                                    class="keyword">select</span><span>&nbsp;first_name&nbsp;</span><span
+                                    class="keyword">from</span><span>&nbsp;student_details;&nbsp;&nbsp;</span></span>
+                        </li>
+                    </ol>
+                </div><textarea name="code" class="sql" style="display: none;">select first_name from student_details;
+</textarea>
+            </div>
+            <p>Now, you will get following data:</p>
+            <table id="comparision">
+                <tbody>
+                    <tr>
+                        <td>Amar</td>
+                    </tr>
+                    <tr>
+                        <td>Akbar</td>
+                    </tr>
+                    <tr>
+                        <td>Anthony</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>We can also retrieve data from more than one column. For example, to select first name and last name of
+                all the students, you need to write</p>
+            <div class="codeblock">
+                <div class="dp-highlighter">
+                    <div class="bar">
+                        <div class="tools"><a href="#"
+                                onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;"></a><a href="#"
+                                onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;"></a><a href="#"
+                                onclick="dp.sh.Toolbar.Command('About',this);return false;"></a></div>
+                    </div>
+                    <ol start="1" class="dp-sql">
+                        <li class="alt"><span><span
+                                    class="keyword">SELECT</span><span>&nbsp;first_name,&nbsp;last_name&nbsp;</span><span
+                                    class="keyword">FROM</span><span>&nbsp;student_details;&nbsp;&nbsp;</span></span>
+                        </li>
+                    </ol>
+                </div><textarea name="code" class="sql" style="display: none;">SELECT first_name, last_name FROM student_details;
+</textarea>
+            </div>
+            <p>Now, you will get following data:</p>
+            <table id="comparision">
+                <tbody>
+                    <tr>
+                        <td>Amar</td>
+                        <td>Sharma</td>
+                    </tr>
+                    <tr>
+                        <td>Akbar</td>
+                        <td>Khan</td>
+                    </tr>
+                    <tr>
+                        <td>Anthony</td>
+                        <td>Milton</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>We can also use clauses like WHERE, GROUP BY, HAVING, ORDER BY with SELECT statement.</p>
+            <p>Here a point is notable that only SELECT and FROM statements are necessary in SQL SELECT statements.
+                Other clauses like WHERE, GROUP BY, ORDER BY, HAVING may be optional.</p>
+        </div>
+
+</body>
+
+</html>

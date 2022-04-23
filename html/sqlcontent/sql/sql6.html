@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL</title>
+    <link rel="stylesheet" href="C:\Users\Sahithi\techera\sessions\java\java1.css">
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-3 col-s-3 menu">
+            <ul>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql.html" style="text-decoration: none;">SQL
+                        Tutorial</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql1.html" style="text-decoration: none;">SQL
+                        Database</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql2.html" style="text-decoration: none;">SQL
+                        Table</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql3.html" style="text-decoration: none;">SQL
+                        Select</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql4.html" style="text-decoration: none;">SQL
+                        Clause</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql5.html" style="text-decoration: none;">Order
+                        By</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql6.html" style="text-decoration: none;">Insert</a>
+                </li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql7.html"
+                        style="text-decoration: none;">Update</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql8.html"
+                        style="text-decoration: none;">Delete</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql9.html" style="text-decoration: none;">SQL
+                        Joins</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql10.html" style="text-decoration: none;">SQL
+                        Keys</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql11.html"
+                        style="text-decoration: none;">Difference</a></li>
+            </ul>
+        </div>
+
+        <div class="col-9 col-s-9">
+            <h1 class="h1">SQL INSERT STATEMENT</h1>
+            <p>SQL INSERT statement is a SQL query. It is used to insert a single or a multiple records in a table.</p>
+            <p>
+            </p>
+            <p>There are two ways to insert data in a table:</p>
+            <p>
+            </p>
+            <ol>
+                <li>By SQL insert into statement
+                    <ol>
+                        <li>By specifying column names</li>
+                        <li>Without specifying column names</li>
+                    </ol>
+                </li>
+                <li>By SQL insert into select statement</li>
+            </ol>
+            <hr>
+            <h2 class="h3">1) Inserting data directly into a table </h2>
+            <p>You can insert a row in the table by using SQL INSERT INTO command.</p>
+            <p>There are two ways to insert values in a table.</p>
+            <p><strong>In the first method there is no need to specify the column name where the data will be inserted,
+                    you need only their values.</strong></p>
+            <p>INSERT INTO table_name <br>
+                VALUES (value1, value2, value3....);</p> 
+            <p><strong>The second method specifies both the column name and values which you want to insert.</strong></p>
+            <p>INSERT INTO table_name (column1, column2, column3....) <br>
+                VALUES (value1, value2, value3.....);</p> 
+            <p>Let's take an example of table which has five records within it.</p>
+            <p style="line-height: 25px;">INSERT INTO STUDENTS (ROLL_NO, NAME, AGE, CITY) <br>
+                VALUES (1, ABHIRAM, 22, ALLAHABAD); <br>
+                INSERT INTO STUDENTS (ROLL_NO, NAME, AGE, CITY) <br>
+                VALUES (2, ALKA, 20, GHAZIABAD); <br>
+                INSERT INTO STUDENTS (ROLL_NO, NAME, AGE, CITY) <br>
+                VALUES (3, DISHA, 21, VARANASI); <br>
+                INSERT INTO STUDENTS (ROLL_NO, NAME, AGE, CITY) <br>
+                VALUES (4, ESHA, 21, DELHI); <br>
+                INSERT INTO STUDENTS (ROLL_NO, NAME, AGE, CITY) <br>
+                VALUES (5, MANMEET, 23, JALANDHAR);</p> 
+            <p>It will show the following table as the final result.</p>
+            <table id="comparision">
+                <tbody>
+                    <tr>
+                        <th>ROLL_NO</th>
+                        <th>NAME</th>
+                        <th> AGE</th>
+                        <th>CITY</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>ABHIRAM</td>
+                        <td>22</td>
+                        <td>ALLAHABAD</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>ALKA</td>
+                        <td>20</td>
+                        <td>GHAZIABAD</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>DISHA</td>
+                        <td>21</td>
+                        <td>VARANASI</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>ESHA</td>
+                        <td>21</td>
+                        <td>DELHI</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>MANMEET</td>
+                        <td>23</td>
+                        <td>JALANDHAR</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>You can create a record in CUSTOMERS table by using this syntax also.</p>
+            <p style="line-height: 25px;">INSERT INTO CUSTOMERS <br>
+                VALUES (6, PRATIK, 24, KANPUR);</p> 
+            <p>The following table will be as follow:</p>
+            <table id="comparision">
+                <tbody>
+                    <tr>
+                        <th>ROLL_NO</th>
+                        <th>NAME</th>
+                        <th>AGE</th>
+                        <th>CITY</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>ABHIRAM</td>
+                        <td>22</td>
+                        <td>ALLAHABAD</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>ALKA</td>
+                        <td>20</td>
+                        <td>GHAZIABAD</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>DISHA</td>
+                        <td>21</td>
+                        <td>VARANASI</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>ESHA</td>
+                        <td>21</td>
+                        <td>DELHI</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>MANMEET</td>
+                        <td>23</td>
+                        <td>JALANDHAR</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>PRATIK</td>
+                        <td>24</td>
+                        <td>KANPUR</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <h2 class="h3">2) Inserting data through SELECT Statement</h2>
+            <p><b>SQL INSERT INTO SELECT Syntax</b></p>
+            <p style="line-height: 25px;">INSERT INTO table_name <br>
+                [(column1, column2, .... column)] <br>
+                SELECT column1, column2, .... Column N <br>
+                FROM table_name [WHERE condition];</p> 
+            <p class="n">Note: when you add a new row, you should make sure that data type of the value and the column
+                should be matched.</p>
+            <p>If any integrity constraints are defined for the table, you must follow them.</p>
+
+</body>
+
+</html>

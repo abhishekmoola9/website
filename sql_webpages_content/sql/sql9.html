@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL</title>
+    <link rel="stylesheet" href="C:\Users\Sahithi\techera\sessions\java\java1.css">
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-3 col-s-3 menu">
+            <ul>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql.html" style="text-decoration: none;">SQL
+                        Tutorial</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql1.html" style="text-decoration: none;">SQL
+                        Database</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql2.html" style="text-decoration: none;">SQL
+                        Table</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql3.html" style="text-decoration: none;">SQL
+                        Select</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql4.html" style="text-decoration: none;">SQL
+                        Clause</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql5.html" style="text-decoration: none;">Order
+                        By</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql6.html" style="text-decoration: none;">Insert</a>
+                </li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql7.html" style="text-decoration: none;">Update</a>
+                </li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql8.html" style="text-decoration: none;">Delete</a>
+                </li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql9.html" style="text-decoration: none;">SQL
+                        Joins</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql10.html" style="text-decoration: none;">SQL
+                        Keys</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql11.html"
+                        style="text-decoration: none;">Difference</a></li>
+            </ul>
+        </div>
+
+        <div class="col-9 col-s-9">
+            <h2 class="h2">SQL JOIN</h2>
+            <p>A SQL Join is used to fetch or combine data (rows or columns) from two or more tables based on the
+                defined conditions.</p>
+            <p><strong>Table 1: Order</strong></p>
+            <table id="comparision">
+                <tbody>
+                    <tr>
+                        <th>OrderID</th>
+                        <th>CustomerID</th>
+                        <th>OrderName</th>
+                        <th>ProductName</th>
+                    </tr>
+                    <tr>
+                        <td>12025</td>
+                        <td>101</td>
+                        <td>Peter</td>
+                        <td>ABC</td>
+                    </tr>
+                    <tr>
+                        <td>12030</td>
+                        <td>105</td>
+                        <td>Robert</td>
+                        <td>XYX</td>
+                    </tr>
+                    <tr>
+                        <td>12032</td>
+                        <td>110</td>
+                        <td>James</td>
+                        <td>XYZ</td>
+                    </tr>
+                    <tr>
+                        <td>12034</td>
+                        <td>115</td>
+                        <td>Andrew</td>
+                        <td>PQR</td>
+                    </tr>
+                    <tr>
+                        <td>12035</td>
+                        <td>120</td>
+                        <td>Mathew</td>
+                        <td>AAA</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><strong>Table 2: Customer</strong></p>
+            <table id="comparision">
+                <tbody>
+                    <tr>
+                        <th>CustomerID</th>
+                        <th>CustomerName</th>
+                        <th>Country</th>
+                    </tr>
+                    <tr>
+                        <td>100</td>
+                        <td>Messy</td>
+                        <td>Maxico</td>
+                    </tr>
+                    <tr>
+                        <td>101</td>
+                        <td>Prince</td>
+                        <td>Taiwan</td>
+                    </tr>
+                    <tr>
+                        <td>103</td>
+                        <td>Maria Fernandez</td>
+                        <td>Turkey</td>
+                    </tr>
+                    <tr>
+                        <td>105</td>
+                        <td>Jasmine</td>
+                        <td>Paris</td>
+                    </tr>
+                    <tr>
+                        <td>110</td>
+                        <td>Faf Weasel</td>
+                        <td>Indonesia</td>
+                    </tr>
+                    <tr>
+                        <td>120</td>
+                        <td>Romen Rocket</td>
+                        <td>Russia</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Now, we have two tables <strong>Order</strong> and the <strong>Customer</strong>. There is a
+                <strong>CustomerID</strong> column common in both tables. So, write the SQL query to define the general
+                relationship to select the matches' records from both tables.
+            </p>
+            <p>Select Order.OrderID, Customer.CustomerName, Customer.Country, Order.ProductName from Order INNER JOIN
+                Customer ON Order.CustomerID = Customer.CustomerID;</p>
+            <p>After executing the above SQL queries, it produces the following output:</p>
+            <table id="comparision">
+                <tbody>
+                    <tr>
+                        <th>OrderID</th>
+                        <th>CustomerName</th>
+                        <th>Country</th>
+                        <th>ProductName</th>
+                    </tr>
+                    <tr>
+                        <td>12025</td>
+                        <td>Prince</td>
+                        <td>Taiwan</td>
+                        <td>ABC</td>
+                    </tr>
+                    <tr>
+                        <td>12030</td>
+                        <td>Jasmine</td>
+                        <td>Paris</td>
+                        <td>XYX</td>
+                    </tr>
+                    <tr>
+                        <td>12032</td>
+                        <td>Faf Weasel</td>
+                        <td>Indonesia</td>
+                        <td>XYZ</td>
+                    </tr>
+                    <tr>
+                        <td>12035</td>
+                        <td>Romen Rocket</td>
+                        <td>Russia</td>
+                        <td>AAA</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2 class="h2">Types of SQL Join</h2>
+            <p>There are different types of joins used in SQL:</p>
+            <ol class="points">
+                <li><a href="#Inner">Inner Join / Simple Join</a></li>
+                <li><a href="#Left">Left Outer Join / Left Join</a></li>
+                <li><a href="#Right">Right Outer Join / Right Join</a></li>
+                <li><a href="#Full">Full Outer Join</a></li>
+                <li><a href="#Cross">Cross Join</a></li>
+                <li><a href="#Self">Self Join</a></li>
+            </ol>
+            <h3 id="Inner" class="h3">Inner Join</h3>
+            <p>The inner join is used to select all matching rows or columns in both tables or as long as the defined
+                condition is valid in SQL.</p>
+            <p><strong>Syntax:</strong></p>
+            <p>Select column_1, column_2, column_3 FROM table_1 INNER JOIN table_2 ON table_1.column = table_2.column;
+            </p>
+            <p>We can represent the inner join through the Venn diagram, as follows:</p>
+            <img src="https://static.javatpoint.com/sqlpages/images/types-of-sql-join.png" alt="Types of SQL JOIN">
+            <p><strong>Table 1: Students</strong></p>
+            <table id="comparision">
+                <tbody>
+                    <tr>
+                        <th>Student_ID</th>
+                        <th>StudentName</th>
+                        <th>Subject</th>
+                        <th>TeacherID</th>
+                    </tr>
+                    <tr>
+                        <td>101</td>
+                        <td>Alexandra</td>
+                        <td>Computer Science</td>
+                        <td>T201</td>
+                    </tr>
+                    <tr>
+                        <td>102</td>
+                        <td>Charles</td>
+                        <td>Economics</td>
+                        <td>T202</td>
+                    </tr>
+                    <tr>
+                        <td>103</td>
+                        <td>Tom Cruise</td>
+                        <td>Computer Science</td>
+                        <td>T201</td>
+                    </tr>
+                    <tr>
+                        <td>104</td>
+                        <td>Aron Finch</td>
+                        <td>Electronics</td>
+                        <td>T203</td>
+                    </tr>
+                    <tr>
+                        <td>105</td>
+                        <td>Siemen Bajoff</td>
+                        <td>Web designing</td>
+                        <td>T204</td>
+                    </tr>
+                    <tr>
+                        <td>106</td>
+                        <td>Christopher</td>
+                        <td>English Literature</td>
+                        <td>T205</td>
+                    </tr>
+                    <tr>
+                        <td>107</td>
+                        <td>Denim</td>
+                        <td>Fashion Designer</td>
+                        <td>T206</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><strong>Table 2: Teachers</strong></p>
+            <table id="comparision">
+                <tbody>
+                    <tr>
+                        <th>TeacherID</th>
+                        <th>TeacherName</th>
+                        <th>TeacherEmail</th>
+                    </tr>
+                    <tr>
+                        <td>T201</td>
+                        <td>Mr Davis</td>
+                        <td>abc@email.com</td>
+                    </tr>
+                    <tr>
+                        <td>T202</td>
+                        <td>Mrs Jonas</td>
+                        <td>jonas@email.com</td>
+                    </tr>
+                    <tr>
+                        <td>T201</td>
+                        <td>Mr Davis</td>
+                        <td>abc@email.com</td>
+                    </tr>
+                    <tr>
+                        <td>T204</td>
+                        <td>Mrs Lopez</td>
+                        <td>lopez@email.com</td>
+                    </tr>
+                    <tr>
+                        <td>T205</td>
+                        <td>Mrs Wiley</td>
+                        <td>wiley@email.com</td>
+                    </tr>
+                    <tr>
+                        <td>T206</td>
+                        <td>Mr Bean</td>
+                        <td>bean@email.com</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>We have two tables: <strong>Students</strong> and the <strong>Teachers</strong> Tables. Let's write the
+                SQL Queries to join the table using the <strong>INNER JOIN</strong> as follows:</p>
+            <p>Select Student_ID, StudentName, TeacherName, TeacherEmail FROM Students INNER JOIN Teachers ON
+                Students.TeacherID = Teachers.TeacherID;</p>
+            <p>After executing the query, it produces the below table.</p>
+            <img src="https://static.javatpoint.com/sqlpages/images/types-of-sql-join2.png" alt="Types of SQL JOIN">
+            <h3 class="h3">Natural Join</h3>
+            <p style="line-height: 25px;">It is a type of inner type that joins two or more tables based on the same
+                column name and has the same
+                data type present on both tables.</p>
+            <p><strong>Syntax:</strong></p>
+            <p>Select * from tablename1 Natural JOIN tablename_2;</p>
+            <p>We have two tables: <strong>Students</strong> and the <strong>Teachers</strong> Tables. Let's write the
+                SQL Queries to join the table using the <strong>Natural JOIN</strong> as follows:</p>
+            <p>Select * from Students Natural JOIN Teachers;</p>
+            <p>After executing the above query, it produces the following table.</p>
+            <img src="https://static.javatpoint.com/sqlpages/images/types-of-sql-join3.png" alt="Types of SQL JOIN">
+            <h3 id="Left" class="h3">LEFT JOIN</h3>
+            <p style="line-height: 25px;">The <strong>LEFT JOIN</strong> is used to retrieve
+                all records from the left table (table1) and the matched rows or columns from the right table (table2).
+                If both tables do not contain any matched rows or columns, it returns the NULL.</p>
+            <p><strong>Syntax:</strong></p>
+            <p>Select column_1, column_2, column(s) FROM table_1 LEFT JOIN table_2 ON table_1.column_name =
+                table_2.column_name;</p>
+            <p>We can also represent the left join through the Venn diagram, as follows:</p>
+            <img src="https://static.javatpoint.com/sqlpages/images/types-of-sql-join4.png" alt="Types of SQL JOIN">
+            <h4 class="n">Note: In some databases, LEFT JOIN is also known as LEFT OUTER JOIN.</h4>
+            <p><strong>Table 1: Product_Details</strong></p>
+            <table id="comparision">
+                <tbody>
+                    <tr>
+                        <th>ProductID</th>
+                        <th>ProductName</th>
+                        <th>Amount</th>
+                    </tr>
+                    <tr>
+                        <td>Pro101</td>
+                        <td>Laptop</td>
+                        <td>56000</td>
+                    </tr>
+                    <tr>
+                        <td>Pro102</td>
+                        <td>Mobile</td>
+                        <td>38000</td>
+                    </tr>
+                    <tr>
+                        <td>Pro103</td>
+                        <td>Headphones</td>
+                        <td>5000</td>
+                    </tr>
+                    <tr>
+                        <td>Pro104</td>
+                        <td>Television</td>
+                        <td>25000</td>
+                    </tr>
+                    <tr>
+                        <td>Pro105</td>
+                        <td>iPad</td>
+                        <td>60000</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><strong>Table 2: Customer_Details</strong></p>
+            <table id="comparision">
+                <tbody>
+                    <tr>
+                        <th>CustomerName</th>
+                        <th>CustomerAddress</th>
+                        <th>CustomerAge</th>
+                        <th>ProductID</th>
+                    </tr>
+                    <tr>
+                        <td>Martin Guptill</td>
+                        <td>San Francisco, USA</td>
+                        <td>26</td>
+                        <td>Pro101</td>
+                    </tr>
+                    <tr>
+                        <td>James</td>
+                        <td>Australia</td>
+                        <td>29</td>
+                        <td>Pro103</td>
+                    </tr>
+                    <tr>
+                        <td>Ambati Williamson</td>
+                        <td>New Zealand</td>
+                        <td>27</td>
+                        <td>Pro102</td>
+                    </tr>
+                    <tr>
+                        <td>Jofra Archer</td>
+                        <td>South Africa</td>
+                        <td>24</td>
+                        <td>Pro105</td>
+                    </tr>
+                    <tr>
+                        <td>Kate Wiley</td>
+                        <td>Australia</td>
+                        <td>20</td>
+                        <td>Pro103</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="line-height: 25px;">We have two tables: <strong>Product_Details</strong> and the
+                <strong>Customer_Details</strong> Tables.
+                Let's write the SQL Queries to join the table using the <strong>LEFT JOIN</strong> as follows:</p>
+            <p>Select ID, ProductName, CustomerName, CustomerAddress, Amount FROM Product_Details LEFT JOIN
+                Customer_Details ON Product_Details.ID = Customer_Details.ProductID;</p>
+            <p>After executing the query, it produces the following table.</p>
+            <img src="https://static.javatpoint.com/sqlpages/images/types-of-sql-join5.png" alt="Types of SQL JOIN">
+            <h3 id="Right" class="h3">RIGHT JOIN or RIGHT Outer JOIN:</h3>
+            <p style="line-height: 25px;">The <strong>RIGHT JOIN</strong> is used to
+                retrieve all records from the right table (table2) and the matched rows or columns from the left table
+                (table1). If both tables do not contain any matched rows or columns, it returns the NULL.</p>
+            <p><strong>Syntax:</strong></p>
+            <p>Select column_1, column_2, column(s) FROM table_1 RIGHT JOIN table_2 ON table_1.column_name =
+                table_2.column_name;</p>
+            <p>We can also represent the right join through the Venn diagram, as follows:</p>
+            <img src="https://static.javatpoint.com/sqlpages/images/types-of-sql-join6.png" alt="Types of SQL JOIN">
+            <h4 class="n">Note: In some databases, the RIGHT JOIN is also known as the RIGHT OUTER JOIN.</h4>
+            <p><strong>Table 1: Product_Details</strong></p>
+            <table id="comparision">
+                <tbody>
+                    <tr>
+                        <th>ID</th>
+                        <th>ProductName</th>
+                        <th>Amount</th>
+                    </tr>
+                    <tr>
+                        <td>Pro101</td>
+                        <td>Laptop</td>
+                        <td>56000</td>
+                    </tr>
+                    <tr>
+                        <td>Pro102</td>
+                        <td>Mobile</td>
+                        <td>38000</td>
+                    </tr>
+                    <tr>
+                        <td>Pro103</td>
+                        <td>Headphones</td>
+                        <td>5000</td>
+                    </tr>
+                    <tr>
+                        <td>Pro104</td>
+                        <td>Television</td>
+                        <td>25000</td>
+                    </tr>
+                    <tr>
+                        <td>Pro105</td>
+                        <td>iPad</td>
+                        <td>60000</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><strong>Table 2: Customer_Details</strong></p>
+            <table id="comparision">
+                <tbody>
+                    <tr>
+                        <th>CustomerName</th>
+                        <th>CustomerAddress</th>
+                        <th>CustomerAge</th>
+                        <th>ProductID
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>Martin Guptill</td>
+                        <td>San Francisco, USA</td>
+                        <td>26</td>
+                        <td>Pro101</td>
+                    </tr>
+                    <tr>
+                        <td>James</td>
+                        <td>Australia</td>
+                        <td>29</td>
+                        <td>Pro103</td>
+                    </tr>
+                    <tr>
+                        <td>Ambati Williamson</td>
+                        <td>New Zealand</td>
+                        <td>27</td>
+                        <td>Pro102</td>
+                    </tr>
+                    <tr>
+                        <td>Jofra Archer</td>
+                        <td>South Africa</td>
+                        <td>24</td>
+                        <td>Pro105</td>
+                    </tr>
+                    <tr>
+                        <td>Omen</td>
+                        <td>England</td>
+                        <td>29</td>
+                        <td>Pro107</td>
+                    </tr>
+                    <tr>
+                        <td>Morgan</td>
+                        <td>England</td>
+                        <td>20</td>
+                        <td>Pro108</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>We have two tables: <strong>Product_Details</strong> and the <strong>Customer_Details</strong> Tables.
+                Let's write the SQL Queries to join the table using the <strong>RIGHT JOIN</strong> as follows:</p>
+            <p></p> Select ID, ProductName, CustomerName, CustomerAddress, Amount FROM Product_Details LEFT JOIN
+            Customer_Details ON Product_Details.ID = Customer_Details.ProductID;
+            </textarea>
+        </div>
+        <p>After executing the query, it produces the below table.</p>
+        <img src="https://static.javatpoint.com/sqlpages/images/types-of-sql-join7.png" alt="Types of SQL JOIN">
+        <h3 id="Full" class="h3">FULL JOIN or FULL Outer JOIN:</h3>
+        <p style="line-height: 25px;">It is a combination result set of both <strong>LEFT JOIN</strong> and
+            <strong>RIGHT JOIN</strong>. The
+            joined tables return all records from both the tables and if no matches are found in the table, it
+            places NULL. It is also called a <strong>FULL OUTER
+                JOIN</strong>.</p>
+        <p><strong>Syntax:</strong></p>
+        <p>Select column_1, column_2, column(s) FROM table_1 FULL JOIN table_2 ON table_1.column_name =
+            table_2.column_name;</p>
+        <p>Or, <strong>FULL OUTER JOIN</strong></p>
+        <p>Select column_1, column_2, column(s) FROM table_1 FULL OUTER JOIN table_2 ON table_1.column_name =
+            table_2.column_name;</p>
+        <p>We can also represent the full outer join through the Venn diagram, as follows:</p>
+        <img src="https://static.javatpoint.com/sqlpages/images/types-of-sql-join8.png" alt="Types of SQL JOIN">
+        <p><strong>Table 1: Product_Details</strong></p>
+        <table id="comparision">
+            <tbody>
+                <tr>
+                    <th>ID</th>
+                    <th>ProductName</th>
+                    <th>Amount</th>
+                </tr>
+                <tr>
+                    <td>Pro101</td>
+                    <td>Laptop</td>
+                    <td>56000</td>
+                </tr>
+                <tr>
+                    <td>Pro102</td>
+                    <td>Mobile</td>
+                    <td>38000</td>
+                </tr>
+                <tr>
+                    <td>Pro103</td>
+                    <td>Headphones</td>
+                    <td>5000</td>
+                </tr>
+                <tr>
+                    <td>Pro104</td>
+                    <td>Television</td>
+                    <td>25000</td>
+                </tr>
+                <tr>
+                    <td>Pro105</td>
+                    <td>iPad</td>
+                    <td>60000</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><strong>Table 2: Customer_Details</strong></p>
+        <table id="comparision">
+            <tbody>
+                <tr>
+                    <th>CustomerName</th>
+                    <th>CustomerAddress</th>
+                    <th>CustomerAge</th>
+                    <th>ProductID</th>
+                </tr>
+                <tr>
+                    <td>Martin Guptill</td>
+                    <td>San Francisco, USA</td>
+                    <td>26</td>
+                    <td>Pro101</td>
+                </tr>
+                <tr>
+                    <td>James</td>
+                    <td>Australia</td>
+                    <td>29</td>
+                    <td>Pro103</td>
+                </tr>
+                <tr>
+                    <td>Ambati Williamson</td>
+                    <td>New Zealand</td>
+                    <td>27</td>
+                    <td>Pro102</td>
+                </tr>
+                <tr>
+                    <td>Jofra Archer</td>
+                    <td>South Africa</td>
+                    <td>24</td>
+                    <td>Pro105</td>
+                </tr>
+                <tr>
+                    <td>Omen</td>
+                    <td>England</td>
+                    <td>29</td>
+                    <td>Pro107</td>
+                </tr>
+                <tr>
+                    <td>Morgan</td>
+                    <td>England</td>
+                    <td>20</td>
+                    <td>Pro108</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>We have two tables: <strong>Product_Details</strong> and the <strong>Customer_Details</strong> Tables.
+            Let's write the SQL Queries to join the table using the <strong>FULL</strong> JOIN as follows:</p>
+        <p>Select ID, ProductName, CustomerName, CustomerAddress, Amount FROM Product_Details FULL JOIN Customer_Details
+            ON Product_Details.ID = Customer_Details.ProductID;</p>
+        <p>After executing the query, it produces the below table. </p>
+        <img src="https://static.javatpoint.com/sqlpages/images/types-of-sql-join9.png" alt="Types of SQL JOIN">
+        <h4 class="n">Note: MySQL does not support FULL JOIN concepts, so we can use UNION ALL clause to combine
+            both tables.</h4>
+        <p>Here is the Syntax for <strong>UNION ALL</strong> Clause to combine the tables.</p>
+        <p> Select ID, ProductName, CustomerName, CustomerAddress, Amount FROM Product_Details LEFT JOIN
+            Customer_Details ON Product_Details.ID = Customer_Details.ProductID <br>
+            UNION ALL <br>
+            Select ID, ProductName, CustomerName, CustomerAddress, Amount FROM Product_Details RIGHT JOIN
+            Customer_Details ON Product_Details.ID = Customer_Details.ProductID</p>
+        <img src="https://static.javatpoint.com/sqlpages/images/types-of-sql-join10.png" alt="Types of SQL JOIN">
+        <h3 id="Cross" class="h3">CROSS JOIN</h3>
+        <p style="line-height: 25px;">It is also known as <strong>CARTESIAN JOIN</strong>, which returns the Cartesian
+            product of two or more
+            joined tables. The <strong>CROSS JOIN</strong>
+            produces a table that merges each row from the first table with each second table row. It is not
+            required to include any condition in CROSS JOIN.</p>
+        <p><strong>Syntax:</strong></p>
+        <p>Select * from table_1 cross join table_2;</p>
+        <p>Or,</p>
+        <p>Select column1, column2, column3 FROM table_1, table_2;</p>
+        <p><strong>Table 1: Product_Details</strong></p>
+        <table id="comparision">
+            <tbody>
+                <tr>
+                    <th>ID</th>
+                    <th>ProductName</th>
+                    <th>Amount</th>
+                </tr>
+                <tr>
+                    <td>Pro101</td>
+                    <td>Laptop</td>
+                    <td>56000</td>
+                </tr>
+                <tr>
+                    <td>Pro102</td>
+                    <td>Mobile</td>
+                    <td>38000</td>
+                </tr>
+                <tr>
+                    <td>Pro103</td>
+                    <td>Headphones</td>
+                    <td>5000</td>
+                </tr>
+                <tr>
+                    <td>Pro104</td>
+                    <td>Television</td>
+                    <td>25000</td>
+                </tr>
+                <tr>
+                    <td>Pro105</td>
+                    <td>iPad</td>
+                    <td>60000</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><strong>Table 2: Customer_Details</strong></p>
+        <table id="comparision">
+            <tbody>
+                <tr>
+                    <th>CustomerName</th>
+                    <th>CustomerAddress</th>
+                    <th>CustomerAge</th>
+                    <th>ProductID</th>
+                </tr>
+                <tr>
+                    <td>Martin Guptill</td>
+                    <td>San Francisco, USA</td>
+                    <td>26</td>
+                    <td>Pro101</td>
+                </tr>
+                <tr>
+                    <td>James</td>
+                    <td>Australia</td>
+                    <td>29</td>
+                    <td>Pro103</td>
+                </tr>
+                <tr>
+                    <td>Ambati Williamson</td>
+                    <td>New Zealand</td>
+                    <td>27</td>
+                    <td>Pro102</td>
+                </tr>
+                <tr>
+                    <td>Jofra Archer</td>
+                    <td>South Africa</td>
+                    <td>24</td>
+                    <td>Pro105</td>
+                </tr>
+                <tr>
+                    <td>Omen</td>
+                    <td>England</td>
+                    <td>29</td>
+                    <td>Pro107</td>
+                </tr>
+                <tr>
+                    <td>Morgan</td>
+                    <td>England</td>
+                    <td>20</td>
+                    <td>Pro108</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>We have two tables: <strong>Product_Details</strong> and the <strong>Customer_Details</strong> Tables.Let's
+            write the SQL Queries to join the table using the <strong>FULL</strong> JOIN as follows:</p>
+        <p>Select ID, ProductName, CustomerName, CustomerAddress, Amount FROM Product_Details, Customer_Details;</p>
+        <p>After executing the query, it produces the below table.</p>
+        <img src="https://static.javatpoint.com/sqlpages/images/types-of-sql-join11.png" alt="Types of SQL JOIN">
+        <h3 id="Self" class="h3">SELF JOIN</h3>
+        <p>It is a SELF JOIN used to create a table by joining itself as there were two tables. It makes temporary
+            naming of at least one table in an SQL statement.</p>
+        <p><strong>Syntax:</strong></p>
+        <p>Select column1, column2, column(s) FROM table_1 Tbl1, table_2 Tbl2 WHERE condition;</p>
+        <p><strong>Tbl1</strong> and <strong>Tbl2</strong> are two different table aliases for the same table.</p>
+        <p><strong>Table 1: Product_Details</strong></p>
+        <table id="comparision">
+            <tbody>
+                <tr>
+                    <th>ID</th>
+                    <th>ProductName</th>
+                    <th>Amount</th>
+                </tr>
+                <tr>
+                    <td>Pro101</td>
+                    <td>Laptop</td>
+                    <td>56000</td>
+                </tr>
+                <tr>
+                    <td>Pro102</td>
+                    <td>Mobile</td>
+                    <td>38000</td>
+                </tr>
+                <tr>
+                    <td>Pro103</td>
+                    <td>Headphones</td>
+                    <td>5000</td>
+                </tr>
+                <tr>
+                    <td>Pro104</td>
+                    <td>Television</td>
+                    <td>25000</td>
+                </tr>
+                <tr>
+                    <td>Pro105</td>
+                    <td>iPad</td>
+                    <td>60000</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Let's write the SQL Queries to join the table using the <strong>SELF JOIN</strong> as follows:</p>
+        <p>Select TB.ID, TB.ProductName FROM Product_Details TB, Product_Details TB2 <br>
+            WHERE TB.AMOUNT &lt; TB2.AMOUNT;</p>
+        <p>After executing the query, it produces the below table. </p>
+        <img src="https://static.javatpoint.com/sqlpages/images/types-of-sql-join12.png" alt="Types of SQL JOIN">
+</body>
+
+</html>

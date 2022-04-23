@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL</title>
+    <link rel="stylesheet" href="C:\Users\Sahithi\techera\sessions\java\java1.css">
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-3 col-s-3 menu">
+            <ul>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql.html" style="text-decoration: none;">SQL
+                        Tutorial</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql1.html" style="text-decoration: none;">SQL
+                        Database</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql2.html" style="text-decoration: none;">SQL
+                        Table</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql3.html" style="text-decoration: none;">SQL
+                        Select</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql4.html" style="text-decoration: none;">SQL
+                        Clause</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\pages\java6.html" style="text-decoration: none;">Order
+                        By</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\pages\java7.html"
+                        style="text-decoration: none;">Insert</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\pages\java8.html"
+                        style="text-decoration: none;">Update</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\pages\java9.html"
+                        style="text-decoration: none;">Delete</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\pages\java10.html" style="text-decoration: none;">SQL
+                        Joins</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\pages\java11.html" style="text-decoration: none;">SQL
+                        Keys</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\pages\java12.html"
+                        style="text-decoration: none;">Difference</a></li>
+            </ul>
+        </div>
+
+        <div class="col-9 col-s-9">
+            <h1>SQL-Tables</h1>
+            <p>Tables are the fundamental level to store data in a relational database management system. It contains a
+                header row at the top of the table which gives the list of column names, followed by rows that contain
+                data.</p>
+            <p>Table is a collection of data, organized in terms of rows and columns. In DBMS term, table is known as
+                relation and row as tuple.</p>
+            <h4 class="n">Note: A table has a specified number of columns, but can have any number of rows.</h4>
+            <p>Table is the simple form of data storage. A table is also considered as a convenient representation of
+                relations.</p>
+            <p>Let's see an example of an employee table:</p>
+            <table id="comparision">
+                <caption>Employee</caption>
+                <tbody>
+                    <tr>
+                        <th>EMP_NAME</th>
+                        <th>ADDRESS</th>
+                        <th>SALARY</th>
+                    </tr>
+                    <tr>
+                        <td>Ankit</td>
+                        <td>Lucknow</td>
+                        <td>15000</td>
+                    </tr>
+                    <tr>
+                        <td>Raman</td>
+                        <td>Allahabad</td>
+                        <td>18000</td>
+                    </tr>
+                    <tr>
+                        <td>Mike</td>
+                        <td>New York</td>
+                        <td>20000</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>In the above table, "Employee" is the table name, "EMP_NAME", "ADDRESS" and "SALARY" are the column
+                names. The combination of data of multiple columns forms a row e.g. "Ankit", "Lucknow" and 15000 are the
+                data of one row.</p>
+            <h2 class="h2">SQL TABLE Variable</h2>
+            <p>The <strong>SQL Table variable</strong> is used to create, modify, rename, copy and delete tables. Table
+                variable was introduced by Microsoft. </p>
+            <p>It was introduced with SQL server 2000 to be an alternative of temporary tables.</p>
+            <p>It is a variable where we temporary store records and results. This is same like temp table but in the
+                case of temp table we need to explicitly drop it.</p>
+            <p>Table variables are used to store a set of records. So declaration syntax generally looks like CREATE
+                TABLE syntax.
+            </p>
+            <p>
+                create table "tablename"  <br>("column1" "data type",  <br>"column2" "data type",  <br>... <br> "columnN" "data type");  
+            </p>
+            <p>When a transaction rolled back the data associated with table variable is not rolled back.</p>
+            <p>A table variable generally uses lesser resources than a temporary variable.</p>
+            <p>Table variable cannot be used as an input or an output parameter.</p>
+        </div>
+
+</body>
+
+</html>

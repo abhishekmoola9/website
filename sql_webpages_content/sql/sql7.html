@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL</title>
+    <link rel="stylesheet" href="C:\Users\Sahithi\techera\sessions\java\java1.css">
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-3 col-s-3 menu">
+            <ul>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql.html" style="text-decoration: none;">SQL
+                        Tutorial</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql1.html" style="text-decoration: none;">SQL
+                        Database</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql2.html" style="text-decoration: none;">SQL
+                        Table</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql3.html" style="text-decoration: none;">SQL
+                        Select</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql4.html" style="text-decoration: none;">SQL
+                        Clause</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql5.html" style="text-decoration: none;">Order
+                        By</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql6.html" style="text-decoration: none;">Insert</a>
+                </li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql7.html" style="text-decoration: none;">Update</a>
+                </li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql8.html"
+                        style="text-decoration: none;">Delete</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql9.html" style="text-decoration: none;">SQL
+                        Joins</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql10.html" style="text-decoration: none;">SQL
+                        Keys</a></li>
+                <li><a href="C:\Users\Sahithi\techera\sessions\java\sql11.html"
+                        style="text-decoration: none;">Difference</a></li>
+            </ul>
+        </div>
+
+        <div class="col-9 col-s-9">
+            <h1 class="h1">SQL UPDATE</h1>
+            <p style="line-height: 25px;">The SQL commands (<i>UPDATE</i> and <i>DELETE</i>) are used to modify the data that is already in the
+                database. The SQL DELETE command uses a WHERE clause.</p>
+            <p style="line-height: 25px;"><b>SQL UPDATE</b> statement is used to change the data of the records held by tables. Which rows is to be
+                update, it is decided by a condition. To specify condition, we use WHERE clause.</p>
+            <p>The UPDATE statement can be written in following form:</p>
+            <p>UPDATE table_name SET [column_name1= value1,... column_nameN = valueN] [WHERE condition]</p> 
+            <p>Let's see the Syntax:</p>
+            <p style="line-height: 30px;">UPDATE table_name <br>
+                SET column_name = expression <br>
+                WHERE conditions</p> 
+            <p>Let's take an example: here we are going to update an entry in the source table.</p>
+            <p>SQL statement:</p>
+            <p style="line-height: 30px;">UPDATE students <br>
+                SET User_Name = 'beinghuman' <br>
+                WHERE Student_Id = '3'</p> 
+            <p><b>Source Table:</b></p>
+            <table id="comparision">
+                <tbody>
+                    <tr>
+                        <th>Student_Id</th>
+                        <th>FirstName</th>
+                        <th>LastName</th>
+                        <th>User_Name</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Ada</td>
+                        <td>Sharma</td>
+                        <td>sharmili</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Rahul</td>
+                        <td>Maurya</td>
+                        <td>sofamous</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>James</td>
+                        <td>Walker</td>
+                        <td>jonny</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>See the result after updating value:</p>
+            <table id="comparision">
+                <tbody>
+                    <tr>
+                        <th>Student_Id</th>
+                        <th>FirstName</th>
+                        <th>LastName</th>
+                        <th>User_Name</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Ada</td>
+                        <td>Sharma</td>
+                        <td>sharmili</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Rahul</td>
+                        <td>Maurya</td>
+                        <td>sofamous</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>James</td>
+                        <td>Walker</td>
+                        <td><b>beinghuman</b></td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2 class="h2">Updating Multiple Fields:</h2>
+            <p>If you are going to update multiple fields, you should separate each field assignment with a comma.</p>
+            <p>SQL UPDATE statement for multiple fields:</p>
+            <p style="line-height: 30px;">UPDATE students <br>
+                SET User_Name = 'beserious', First_Name = 'Johnny' <br>
+                WHERE Student_Id = '3'</p> 
+            <p>Result of the table is given below:</p>
+            <table id="comparision">
+                <tbody>
+                    <tr>
+                        <th>Student_Id</th>
+                        <th>FirstName</th>
+                        <th>LastName</th>
+                        <th>User_Name</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Ada</td>
+                        <td>Sharma</td>
+                        <td>sharmili</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Rahul</td>
+                        <td>Maurya</td>
+                        <td>sofamous</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><b>Johnny</b></td>
+                        <td>Walker</td>
+                        <td><b>beserious</b></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>MYSQL SYNTAX FOR UPDATING TABLE:</p>
+            <p style="line-height: 30px;">UPDATE table_name <br>
+                SET field1 = new-value1, field2 = new-value2, <br>
+                [WHERE CLAUSE]</p> 
+            <p><b>SQL UPDATE SELECT:</b></p>
+            <p><b>SQL UPDATE WITH SELECT QUERY:</b></p>
+            <p>We can use SELECT statement to update records through UPDATE statement.</p>
+            <p><b>SYNTAX:</b></p>
+            <p style="line-height: 30px;">UPDATE tableDestination <br>
+                SET tableDestination.col = value <br>
+                WHERE EXISTS ( <br>
+                SELECT col2.value <br>
+                FROM  tblSource <br>
+                WHERE tblSource.join_col = tblDestination. Join_col <br>
+                AND  tblSource.Constraint = value)</p> 
+            <p>You can also try this one - </p>
+            <p style="line-height: 30px;">UPDATE <br>
+                Table <br>
+                SET <br>
+                Table.column1 = othertable.column 1, <br>
+                Table.column2 = othertable.column 2 <br>
+                FROM <br>
+                Table <br>
+                INNER JOIN <br>
+                Other_table <br>
+                ON <br>
+                Table.id = other_table.id</p> 
+            <p><b>My SQL SYNTAX:</b></p>
+            <p>If you want to UPDATE with SELECT in My SQL, you can use this syntax:</p>
+            <p>Let's take an example having two tables. Here,</p>
+            <p>First table contains -</p>
+            <p>Cat_id, cat_name,</p>
+            <p>And the second table contains -</p>
+            <p>Rel_cat_id, rel_cat_name</p>
+            <p><b>SQL UPDATE COLUMN:</b></p>
+            <p>We can update a single or multiple columns in SQL with SQL UPDATE query.</p>
+            <p><b>SQL UPDATE EXAMPLE WITH UPDATING SINGLE COLUMN:</b></p>
+            <p style="line-height: 30px;">UPDATE students <br>
+                SET student_id = 001 <br>
+                WHERE student_name = 'AJEET';</p> 
+            <p>This SQL UPDATE example would update the student_id to '001' in the student table where student_name is
+                'AJEET'.</p>
+            <p><b>SQL UPDATE EXAMPLE WITH UPDATING MULTIPLE COLUMNS:</b></p>
+            <p>To update more than one column with a single update statement:</p>
+            <p style="line-height: 30px;"> UPDATE students <br>
+                SET student_name = 'AJEET', <br>
+                Religion = 'HINDU' <br>
+                WHERE student_name = 'RAJU';</p>
+            <p>This SQL UPDATE statement will change the student name to 'AJEET' and religion to 'HINDU' where the
+                student name is 'RAJU'.</p>
+
+</body>
+
+</html>

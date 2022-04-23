@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Order by</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="D:\javawebpage\java\css\sahithi.css">
+</head>
+
+<body>
+    
+    <!-- Navbar -->
+    <!--<script src="function.js"></script>-->
+    <h4><nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+          <img  src="E:\nevergiveup2\images\logoworld.png" alt="#" width="150px" height="75px">
+        </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="file:///E:/nevergiveup2/html/copy.html">Home</a>
+              </li>
+             
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Courses
+                </a>
+                <ul class="dropdown-menu" type="none" aria-labelledby="navbarDropdown">Front-End-Technologies</a></li>
+                   <ul type="none" class="dropdown-submenu"> 
+                     <li><a class="dropdown-item" href="file:///D:/javawebpage/java/html/javahtml1.html"  >Html5</a></li>
+                     <li><a class="dropdown-item" href="file:///D:/javawebpage/java/html/javahtml1.html"  >Css3</a></li>
+                     <li><a class="dropdown-item" href="file:///D:/javawebpage/java/html/javahtml1.html"  >Bootsrap</a></li>
+                     <li><a class="dropdown-item" href="file:///D:/javawebpage/java/html/javahtml1.html"  >JavaSript</a></li>
+                     <li><a class="dropdown-item" href="file:///D:/javawebpage/java/html/javahtml1.html"  >AngularJS</a></li>
+                     <li><a class="dropdown-item" href="file:///D:/javawebpage/java/html/javahtml1.html"  >ReactJS</a></li>
+                     <li><a class="dropdown-item" href="file:///D:/javawebpage/java/html/javahtml1.html"  >JQuery</a></li>
+                   </ul>
+                  </li>
+                  <li><a class="dropdown-item" aria-labelledby="navbarDropdown" href="#">Back End Technologies</a></li>
+                  <ul type="none" class="dropdown-submenu"> 
+                    <li><a class="dropdown-item" href="file:///D:/javawebpage/java/html/javahtml1.html"  >Java</a></li>
+                    <li><a class="dropdown-item" href="file:///D:/javawebpage/java/html/javahtml1.html"  >PHP</a></li>
+                    <li><a class="dropdown-item" href="file:///D:/javawebpage/java/html/javahtml1.html"  >NodeJs</a></li>
+                    <li><a class="dropdown-item" href="file:///D:/javawebpage/java/html/javahtml1.html"  >MySql</a></li>
+                   
+                  </ul>
+                  <li><a class="dropdown-item" href="#">FrameWorks</a></li>
+                  <ul type="none" class="dropdown-submenu"> 
+                    <li><a class="dropdown-item" href="file:///D:/javawebpage/java/html/javahtml1.html"  >Spring</a></li>
+                    <li><a class="dropdown-item" href="file:///D:/javawebpage/java/html/javahtml1.html"  >Jsp</a></li>
+                    <li><a class="dropdown-item" href="file:///D:/javawebpage/java/html/javahtml1.html"  >Django</a></li>
+                    <li><a class="dropdown-item" href="file:///D:/javawebpage/java/html/javahtml1.html"  >Grails</a></li>
+                   
+                  </ul>
+                  <li><a class="dropdown-item" href="#">Database</a></li>
+                  <ul type="none" class="dropdown-submenu"> 
+                    <li><a class="dropdown-item" href="file:///D:/javawebpage/java/html/javahtml1.html"  >MySql</a></li>
+                    <li><a class="dropdown-item" href="file:///D:/javawebpage/java/html/sqlhtml.html"  >Sql</a></li>
+                    <li><a class="dropdown-item" href="file:///D:/javawebpage/java/html/javahtml1.html"  >Oracle</a></li>
+                    <li><a class="dropdown-item" href="file:///D:/javawebpage/java/html/javahtml1.html"  >PostgreSQL</a></li>
+                   
+                  </ul>
+                  <li><a class="dropdown-item" href="#">Cloud Technologies</a></li>
+                  <li><a class="dropdown-item" href="#">DevOps</a></li>
+                  <li><a class="dropdown-item" href="#">AI</a></li>
+                 
+                  
+                </ul>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Services
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Digital Transformation</a></li>
+                  <li><a class="dropdown-item" href="#">Cloud Enablement</a></li>
+                  <li><a class="dropdown-item" href="#">Web Applications</a></li>
+                  <li><a class="dropdown-item" href="#">AI</a></li>
+                  <li><a class="dropdown-item" href="#">Product Engineering</a></li>
+                  
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Careers
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Placement Registration</a></li>
+                  <li><a class="dropdown-item" href="#">Job Openings</a></li>
+                  <li><a class="dropdown-item" href="#">Interview Questions</a></li>
+                  <li><a class="dropdown-item" href="#">Technologies</a></li>
+                  
+                  
+                </ul>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     Free Classes
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="https://www.youtube.com/watch?v=8cm1x4bC610"></a>JAVA</li>
+                    
+                    <li><a class="dropdown-item" href="https://www.youtube.com/watch?v=eow125xV5-c"></a>BOOTSTRAP</li>
+                    <li><a class="dropdown-item" href="https://www.youtube.com/watch?v=W6NZfCO5SIk"></a>JAVASCRIPT</li>
+                  </ul>
+                 
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="file:///E:/website/html/login.html">login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="file:///D:/registration/rghtml/rh.html">Register</a>
+                </li>
+             
+              
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+        <div>
+         </h4> 
+    <div class="row">
+        <div class="col-3 col-s-3 menu">
+            <ul>
+                <li><a href="file:///D:/javawebpage/java/html/sqlhtml.html" style="text-decoration: none;">SQL
+                        Tutorial</a></li>
+                <li><a href="file:///D:/javawebpage/java/html/sqlhtml1.html" style="text-decoration: none;">SQL
+                        Database</a></li>
+                <li><a href="file:///D:/javawebpage/java/html/sqlhtml2.html" style="text-decoration: none;">SQL
+                        Table</a></li>
+                <li><a href="D:/javawebpage/java/html/sqlhtml3.html" style="text-decoration: none;">SQL
+                        Select</a></li>
+                <li><a href="D:/javawebpage/java/html/sqlhtml4.html" style="text-decoration: none;">SQL
+                        Clause</a></li>
+                <li><a href="D:/javawebpage/java/html/sqlhtml5.html" style="text-decoration: none;">Order
+                        By</a></li>
+                <li><a href="D:/javawebpage/java/html/sqlhtml6.html"
+                        style="text-decoration: none;">Insert</a></li>
+                <li><a href="D:/javawebpage/java/html/sqlhtml7.html"
+                        style="text-decoration: none;">Update</a></li>
+                <li><a href="D:/javawebpage/java/html/sqlhtml8.html"
+                        style="text-decoration: none;">Delete</a></li>
+                <li><a href="D:/javawebpage/java/html/sqlhtml9.html" style="text-decoration: none;">SQL
+                        Joins</a></li>
+                <li><a href="D:/javawebpage/java/html/sqlhtml10.html" style="text-decoration: none;">SQL
+                        Keys</a></li>
+                <li><a href="D:/javawebpage/java/html/sqlhtml11.html"
+                        style="text-decoration: none;">Difference</a></li>
+            </ul>
+        </div>
+
+        <div class="col-9 col-s-9">
+            <h1 class="h1">SQL ORDER BY Clause</h1>
+            <ul class="points" style="line-height: 25px;">
+                <li>Whenever we want to sort the records based on the columns stored in the tables of the SQL database,
+                    then we consider using the ORDER BY clause in SQL.</li>
+                <li>The ORDER BY clause in SQL will help us to sort the records based on the specific column of a table.
+                    This means that all the values stored in the column on which we are applying ORDER BY clause will be
+                    sorted, and the corresponding column values will be displayed in the sequence in which we have
+                    obtained the values in the earlier step.</li>
+                <li>Using the ORDER BY clause, we can sort the records in ascending or descending order as per our
+                    requirement. The records will be sorted in ascending order whenever the <strong>ASC keyword</strong>
+                    is used with ORDER by clause. <strong>DESC keyword</strong> will sort the records in descending
+                    order.</li>
+                <li><strong><em>If no keyword is specified after the column based on which we have to sort the records,
+                            in that case, the sorting will be done by default in the ascending order.</em></strong></li>
+            </ul>
+            <p>Before writing the queries for sorting the records, let us understand the syntax.</p>
+            <h3 class="h3">Syntax to sort the records in ascending order:</h3>
+            <p>SELECT ColumnName1,...,ColumnNameN FROM TableName  ORDER BY ColumnName ASC;</p>   
+            <h3 class="h3">Syntax to sort the records in descending order:</h3>
+            <p>SELECT ColumnName1,...,ColumnNameN FROM TableName  ORDER BY ColumnNameDESC;</p>   
+            <h3 class="h3">Syntax to sort the records in ascending order without using ASC keyword:</h3>
+            <p>SELECT ColumnName1,...,ColumnNameN FROM TableName  ORDER BY ColumnName;</p>   
+            <p>Let us explore more on this topic with the help of examples. We will use the MySQL database for writing
+                the queries in examples.</p>
+            <p>Consider we have customers table with the following records:</p>
+            <table id="comparision">
+                <tbody>
+                    <tr>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>AGE</th>
+                        <th>ADDRESS</th>
+                        <th>SALARY</th>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Shiva Tiwari</td>
+                        <td>22</td>
+                        <td>Bhopal</td>
+                        <td>21000</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Ajeet Bhargav</td>
+                        <td>45</td>
+                        <td>Meerut</td>
+                        <td>65000</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Ritesh Yadav</td>
+                        <td>36</td>
+                        <td>Azamgarh</td>
+                        <td>26000</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Balwant Singh</td>
+                        <td>45</td>
+                        <td>Varanasi</td>
+                        <td>36000</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Mahesh Sharma</td>
+                        <td>26</td>
+                        <td>Mathura</td>
+                        <td>22000</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Rohit Shrivastav</td>
+                        <td>19</td>
+                        <td>Ahemdabad</td>
+                        <td>38000</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Neeru Sharma</td>
+                        <td>29</td>
+                        <td>Pune</td>
+                        <td>40000</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Aakash Yadav</td>
+                        <td>32</td>
+                        <td>Mumbai</td>
+                        <td>43500</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Sahil Sheikh</td>
+                        <td>35</td>
+                        <td>Aurangabad</td>
+                        <td>68800</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 class="h3">Example 1:</h3>
+            <p><strong>Write a query to sort the records in the ascending order of the customer names stored in the
+                    customers table.</strong></p>
+            <p><strong>Query:</strong></p>
+            <p>SELECT *FROM customers ORDER BY Name ASC;</p> 
+            <p>Here in a SELECT query, an ORDER BY clause is applied on the column 'Name' to sort the records. ASC
+                keyword will sort the records in ascending order.</p>
+            <p>You will get the following output:</p>
+            <table id="comparision">
+                <tbody>
+                    <tr>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>AGE</th>
+                        <th>ADDRESS</th>
+                        <th>SALARY</th>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Aakash Yadav</td>
+                        <td>32</td>
+                        <td>Mumbai</td>
+                        <td>43500</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Ajeet Bhargav</td>
+                        <td>45</td>
+                        <td>Meerut</td>
+                        <td>65000</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Balwant Singh</td>
+                        <td>45</td>
+                        <td>Varanasi</td>
+                        <td>36000</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Himani Gupta</td>
+                        <td>21</td>
+                        <td>Modinagar</td>
+                        <td>22000</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Mahesh Sharma</td>
+                        <td>26</td>
+                        <td>Mathura</td>
+                        <td>22000</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Neeru Sharma</td>
+                        <td>29</td>
+                        <td>Pune</td>
+                        <td>40000</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Ritesh Yadav</td>
+                        <td>36</td>
+                        <td>Azamgarh</td>
+                        <td>26000</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Rohit Shrivastav</td>
+                        <td>19</td>
+                        <td>Ahemdabad</td>
+                        <td>38000</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Sahil Sheikh</td>
+                        <td>35</td>
+                        <td>Aurangabad</td>
+                        <td>68800</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Shiva Tiwari</td>
+                        <td>22</td>
+                        <td>Bhopal</td>
+                        <td>21000</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>All the records present in the customers table are displayed in the ascending order of the customer's
+                name.</p>
+            <h3 class="h3">Example 2:</h3>
+            <p><strong>Write a query to sort the records in the ascending order of the addresses stored in the customers
+                    table.</strong></p>
+            <p><strong>Query:</strong></p>
+            <p>SELECT *FROM customers ORDER BY Address;</p> 
+            <p style="line-height: 25px;">Here in a SELECT query, an ORDER BY clause is applied to the 'Address' column to sort the records. No
+                keyword is used after the ORDER BY clause. Hence, the records, by default, will be sorted in ascending
+                order.</p>
+            <p>You will get the following output:</p>
+            <table id="comparision">
+                <tbody>
+                    <tr>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>AGE</th>
+                        <th>ADDRESS</th>
+                        <th>SALARY</th>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Rohit Shrivastav</td>
+                        <td>19</td>
+                        <td>Ahemdabad</td>
+                        <td>38000</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Sahil Sheikh</td>
+                        <td>35</td>
+                        <td>Aurangabad</td>
+                        <td>68800</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Ritesh Yadav</td>
+                        <td>36</td>
+                        <td>Azamgarh</td>
+                        <td>26000</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Shiva Tiwari</td>
+                        <td>22</td>
+                        <td>Bhopal</td>
+                        <td>21000</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Mahesh Sharma</td>
+                        <td>26</td>
+                        <td>Mathura</td>
+                        <td>22000</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Ajeet Bhargav</td>
+                        <td>45</td>
+                        <td>Meerut</td>
+                        <td>65000</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Himani Gupta</td>
+                        <td>21</td>
+                        <td>Modinagar</td>
+                        <td>22000</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Aakash Yadav</td>
+                        <td>32</td>
+                        <td>Mumbai</td>
+                        <td>43500</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Neeru Sharma</td>
+                        <td>29</td>
+                        <td>Pune</td>
+                        <td>40000</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Balwant Singh</td>
+                        <td>45</td>
+                        <td>Varanasi</td>
+                        <td>36000</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>All the records present in the customers table are displayed in the ascending order of the customer's
+                address.</p>
+            <h3 class="h3">Example 3:</h3>
+            <p><strong>Write a query to sort the records in the descending order of the customer salary stored in the
+                    customers table.</strong></p>
+            <p><strong>Query:</strong></p>
+            <p>SELECT *FROM customers ORDER BY Salary DESC;</p> 
+            <p style="line-height: 25px;">Here in a SELECT query, an ORDER BY clause is applied on the column ?Salary? to sort the records. DESC
+                keyword will sort the records in descending order.</p>
+            <p>You will get the following output:</p>
+            <table id="comparision">
+                <tbody>
+                    <tr>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>AGE</th>
+                        <th>ADDRESS</th>
+                        <th>SALARY</th>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Sahil Sheikh</td>
+                        <td>35</td>
+                        <td>Aurangabad</td>
+                        <td>68800</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Ajeet Bhargav</td>
+                        <td>45</td>
+                        <td>Meerut</td>
+                        <td>65000</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Aakash Yadav</td>
+                        <td>32</td>
+                        <td>Mumbai</td>
+                        <td>43500</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Neeru Sharma</td>
+                        <td>29</td>
+                        <td>Pune</td>
+                        <td>40000</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Rohit Shrivastav</td>
+                        <td>19</td>
+                        <td>Ahemdabad</td>
+                        <td>38000</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Balwant Singh</td>
+                        <td>45</td>
+                        <td>Varanasi</td>
+                        <td>36000</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Ritesh Yadav</td>
+                        <td>36</td>
+                        <td>Azamgarh</td>
+                        <td>26000</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Mahesh Sharma</td>
+                        <td>26</td>
+                        <td>Mathura</td>
+                        <td>22000</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Himani Gupta</td>
+                        <td>21</td>
+                        <td>Modinagar</td>
+                        <td>22000</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Shiva Tiwari</td>
+                        <td>22</td>
+                        <td>Bhopal</td>
+                        <td>21000</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>All the records present in the customers table are displayed in the descending order of the customer's
+                salary.</p>
+            <h3 class="h3">Example 4:</h3>
+            <p><strong>Write a query to sort the records in the descending order of the customer age stored in the
+                    customers table.</strong></p>
+            <p><strong>Query:</strong></p>
+            <p>SELECT *FROM customers ORDER BY Age DESC;</p> 
+            <p style="line-height: 25px;">Here in a SELECT query, an ORDER BY clause is applied on the column 'Age' to sort the records. DESC
+                keyword will sort the records in descending order.</p>
+            <p>You will get the following output:</p>
+            <table id="comparision">
+                <tbody>
+                    <tr>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>AGE</th>
+                        <th>ADDRESS</th>
+                        <th>SALARY</th>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Ajeet Bhargav</td>
+                        <td>45</td>
+                        <td>Meerut</td>
+                        <td>65000</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Balwant Singh</td>
+                        <td>45</td>
+                        <td>Varanasi</td>
+                        <td>36000</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Ritesh Yadav</td>
+                        <td>36</td>
+                        <td>Azamgarh</td>
+                        <td>26000</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Sahil Sheikh</td>
+                        <td>35</td>
+                        <td>Aurangabad</td>
+                        <td>68800</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Aakash Yadav</td>
+                        <td>32</td>
+                        <td>Mumbai</td>
+                        <td>43500</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Neeru Sharma</td>
+                        <td>29</td>
+                        <td>Pune</td>
+                        <td>40000</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Mahesh Sharma</td>
+                        <td>26</td>
+                        <td>Mathura</td>
+                        <td>22000</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Shiva Tiwari</td>
+                        <td>22</td>
+                        <td>Bhopal</td>
+                        <td>21000</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Himani Gupta</td>
+                        <td>21</td>
+                        <td>Modinagar</td>
+                        <td>22000</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Rohit Shrivastav</td>
+                        <td>19</td>
+                        <td>Ahemdabad</td>
+                        <td>38000</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>All the records present in the customers table are displayed in the descending order of the customer's
+                age.</p>
+            <h3 class="h3">Consider we have another table named agents with the following records:</h3>
+            <table id="comparision">
+                <tbody>
+                    <tr>
+                        <th>AID</th>
+                        <th>Name</th>
+                        <th>WorkArea</th>
+                        <th>Profit_Percent</th>
+                        <th>ContactNumber</th>
+                        <th>Salary</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Gurpreet Singh</td>
+                        <td>Bangalore</td>
+                        <td>1</td>
+                        <td>9989675432</td>
+                        <td>43000</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Sakshi Kumari</td>
+                        <td>Chennai</td>
+                        <td>5</td>
+                        <td>8190567342</td>
+                        <td>25000</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Prachi Desai</td>
+                        <td>Mumbai</td>
+                        <td>2</td>
+                        <td>9056123432</td>
+                        <td>60000</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Shivani More</td>
+                        <td>Pune</td>
+                        <td>3</td>
+                        <td>8894236789</td>
+                        <td>35500</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Pallavi Singh</td>
+                        <td>Delhi</td>
+                        <td>4</td>
+                        <td>7798092341</td>
+                        <td>38700</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Rohini Kulkarni</td>
+                        <td>Ambala</td>
+                        <td>8</td>
+                        <td>7890945612</td>
+                        <td>25670</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Shweta Dixit</td>
+                        <td>Chandigarh</td>
+                        <td>6</td>
+                        <td>8898786453</td>
+                        <td>31670</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Sonakshi Tiwari</td>
+                        <td>Udaipur</td>
+                        <td>2</td>
+                        <td>9809453421</td>
+                        <td>25050</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Anushka Tripathi</td>
+                        <td>Ujjain</td>
+                        <td>9</td>
+                        <td>8909124326</td>
+                        <td>38000</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Devika Sharma</td>
+                        <td>Goa</td>
+                        <td>7</td>
+                        <td>7864523145</td>
+                        <td>44050</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 class="h3">Example 1:</h3>
+            <p><strong>Write a query to sort the records in the ascending order of the agent names stored in the agents
+                    table.</strong></p>
+            <p><strong>Query:</strong></p>
+            <p>SELECT *FROM agents ORDER BY Name ASC;</p> 
+            <p style="line-height: 25px;">Here in a SELECT query, an ORDER BY clause is applied on the column 'Name' to sort the records. ASC
+                keyword will sort the records in ascending order.</p>
+            <p>You will get the following output:</p>
+            <table id="comparision">
+                <tbody>
+                    <tr>
+                        <th>AID</th>
+                        <th>Name</th>
+                        <th>WorkArea</th>
+                        <th>Profit_Percent</th>
+                        <th>ContactNumber</th>
+                        <th>Salary</th>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Anushka Tripathi</td>
+                        <td>Ujjain</td>
+                        <td>9</td>
+                        <td>8909124326</td>
+                        <td>38000</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Devika Sharma</td>
+                        <td>Goa</td>
+                        <td>7</td>
+                        <td>7864523145</td>
+                        <td>44050</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Gurpreet Singh</td>
+                        <td>Bangalore</td>
+                        <td>1</td>
+                        <td>9989675432</td>
+                        <td>43000</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Pallavi Singh</td>
+                        <td>Delhi</td>
+                        <td>4</td>
+                        <td>7798092341</td>
+                        <td>38700</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Prachi Desai</td>
+                        <td>Mumbai</td>
+                        <td>2</td>
+                        <td>9056123432</td>
+                        <td>60000</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Rohini Kulkarni</td>
+                        <td>Ambala</td>
+                        <td>8</td>
+                        <td>7890945612</td>
+                        <td>25670</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Sakshi Kumari</td>
+                        <td>Chennai</td>
+                        <td>5</td>
+                        <td>8190567342</td>
+                        <td>25000</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Shivani More</td>
+                        <td>Pune</td>
+                        <td>3</td>
+                        <td>8894236789</td>
+                        <td>35500</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Shweta Dixit</td>
+                        <td>Chandigarh</td>
+                        <td>6</td>
+                        <td>8898786453</td>
+                        <td>31670</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Sonakshi Tiwari</td>
+                        <td>Udaipur</td>
+                        <td>2</td>
+                        <td>9809453421</td>
+                        <td>25050</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>All the records present in the agents table are displayed in the ascending order of the agent's name.</p>
+            <h3 class="h3">Example 2:</h3>
+            <p><strong>Write a query to sort the records in the descending order of the work area stored in the agents
+                    table.</strong></p>
+            <p><strong>Query:</strong></p>
+            <p>SELECT *FROM agents ORDER BY WorkArea DESC;</p> 
+            <p style="line-height: 25px;">Here in a SELECT query, an ORDER BY clause is applied on the column 'WorkArea' to sort the records. DESC
+                keyword will sort the records in descending order.</p>
+            <p>You will get the following output:</p>
+            <table id="comparision">
+                <tbody>
+                    <tr>
+                        <th>AID</th>
+                        <th>Name</th>
+                        <th>WorkArea</th>
+                        <th>Profit_Percent</th>
+                        <th>ContactNumber</th>
+                        <th>Salary</th>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Anushka Tripathi</td>
+                        <td>Ujjain</td>
+                        <td>9</td>
+                        <td>8909124326</td>
+                        <td>38000</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Sonakshi Tiwari</td>
+                        <td>Udaipur</td>
+                        <td>2</td>
+                        <td>9809453421</td>
+                        <td>25050</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Shivani More</td>
+                        <td>Pune</td>
+                        <td>3</td>
+                        <td>8894236789</td>
+                        <td>35500</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Prachi Desai</td>
+                        <td>Mumbai</td>
+                        <td>2</td>
+                        <td>9056123432</td>
+                        <td>60000</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Devika Sharma</td>
+                        <td>Goa</td>
+                        <td>7</td>
+                        <td>7864523145</td>
+                        <td>44050</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Pallavi Singh</td>
+                        <td>Delhi</td>
+                        <td>4</td>
+                        <td>7798092341</td>
+                        <td>38700</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Sakshi Kumari</td>
+                        <td>Chennai</td>
+                        <td>5</td>
+                        <td>8190567342</td>
+                        <td>25000</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Shweta Dixit</td>
+                        <td>Chandigarh</td>
+                        <td>6</td>
+                        <td>8898786453</td>
+                        <td>31670</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Gurpreet Singh</td>
+                        <td>Bangalore</td>
+                        <td>1</td>
+                        <td>9989675432</td>
+                        <td>43000</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Rohini Kulkarni</td>
+                        <td>Ambala</td>
+                        <td>8</td>
+                        <td>7890945612</td>
+                        <td>25670</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>All the records present in the agents table are displayed in the descending order of the customer's work
+                area.</p>
+            <h3 class="h3">Example 3:</h3>
+            <p>Write a query to sort the records in the ascending order of the agent salary stored in the agents table.
+            </p>
+            <p><strong>Query:</strong></p>
+            <p>SELECT *FROM agents ORDER BY Salary;</p> 
+            <p style="line-height: 25px;">Here in a SELECT query, an ORDER BY clause is applied on the column 'Salary' to sort the records. No
+                keyword is used after the ORDER BY clause. Hence, the records, by default, will be sorted in ascending
+                order.</p>
+            <p>You will get the following output:</p>
+            <table id="comparision">
+                <tbody>
+                    <tr>
+                        <th>AID</th>
+                        <th>Name</th>
+                        <th>WorkArea</th>
+                        <th>Profit_Percent</th>
+                        <th>ContactNumber</th>
+                        <th>Salary</th>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Sakshi Kumari</td>
+                        <td>Chennai</td>
+                        <td>5</td>
+                        <td>8190567342</td>
+                        <td>25000</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Sonakshi Tiwari</td>
+                        <td>Udaipur</td>
+                        <td>2</td>
+                        <td>9809453421</td>
+                        <td>25050</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Rohini Kulkarni</td>
+                        <td>Ambala</td>
+                        <td>8</td>
+                        <td>7890945612</td>
+                        <td>25670</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Shweta Dixit</td>
+                        <td>Chandigarh</td>
+                        <td>6</td>
+                        <td>8898786453</td>
+                        <td>31670</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Shivani More</td>
+                        <td>Pune</td>
+                        <td>3</td>
+                        <td>8894236789</td>
+                        <td>35500</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Anushka Tripathi</td>
+                        <td>Ujjain</td>
+                        <td>9</td>
+                        <td>8909124326</td>
+                        <td>38000</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Pallavi Singh</td>
+                        <td>Delhi</td>
+                        <td>4</td>
+                        <td>7798092341</td>
+                        <td>38700</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Gurpreet Singh</td>
+                        <td>Bangalore</td>
+                        <td>1</td>
+                        <td>9989675432</td>
+                        <td>43000</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Devika Sharma</td>
+                        <td>Goa</td>
+                        <td>7</td>
+                        <td>7864523145</td>
+                        <td>44050</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Prachi Desai</td>
+                        <td>Mumbai</td>
+                        <td>2</td>
+                        <td>9056123432</td>
+                        <td>60000</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>All the records present in the agents table are displayed in the ascending order of the customer's
+                salary.</p>
+            <h3 class="h3">Example 4:</h3>
+            <p><strong>Write a query to sort the records in the descending order of the agent salary stored in the
+                    agents table.</strong></p>
+            <p><strong>Query:</strong></p>
+            <p>SELECT *FROM agents ORDER BY Salary DESC;</p> 
+            <p style="line-height: 25px;">Here in a SELECT query, an ORDER BY clause is applied on the column 'Salary' to sort the records. DESC
+                keyword will sort the records in descending order.</p>
+            <p>You will get the following output:</p>
+            <table id="comparision">
+                <tbody>
+                    <tr>
+                        <th>AID</th>
+                        <th>Name</th>
+                        <th>WorkArea</th>
+                        <th>Profit_Percent</th>
+                        <th>ContactNumber</th>
+                        <th>Salary</th>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Prachi Desai</td>
+                        <td>Mumbai</td>
+                        <td>2</td>
+                        <td>9056123432</td>
+                        <td>60000</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Devika Sharma</td>
+                        <td>Goa</td>
+                        <td>7</td>
+                        <td>7864523145</td>
+                        <td>44050</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Gurpreet Singh</td>
+                        <td>Bangalore</td>
+                        <td>1</td>
+                        <td>9989675432</td>
+                        <td>43000</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Pallavi Singh</td>
+                        <td>Delhi</td>
+                        <td>4</td>
+                        <td>7798092341</td>
+                        <td>38700</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Anushka Tripathi</td>
+                        <td>Ujjain</td>
+                        <td>9</td>
+                        <td>8909124326</td>
+                        <td>38000</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Shivani More</td>
+                        <td>Pune</td>
+                        <td>3</td>
+                        <td>8894236789</td>
+                        <td>35500</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Shweta Dixit</td>
+                        <td>Chandigarh</td>
+                        <td>6</td>
+                        <td>8898786453</td>
+                        <td>31670</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Rohini Kulkarni</td>
+                        <td>Ambala</td>
+                        <td>8</td>
+                        <td>7890945612</td>
+                        <td>25670</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Sonakshi Tiwari</td>
+                        <td>Udaipur</td>
+                        <td>2</td>
+                        <td>9809453421</td>
+                        <td>25050</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Sakshi Kumari</td>
+                        <td>Chennai</td>
+                        <td>5</td>
+                        <td>8190567342</td>
+                        <td>25000</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>All the records present in the agents table are displayed in the descending order of the customer's
+                address.</p>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+
+</html>
